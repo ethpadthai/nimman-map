@@ -35,16 +35,18 @@ adjustMapView();
 
 window.addEventListener('resize', adjustMapView);
 
+const iconUrl = 'https://unpkg.com/leaflet/dist/images/marker-icon.png'
+
 const marker = L.marker([imageHeight / 2, imageWidth / 2], {
   icon: L.icon({
-    iconUrl: 'https://unpkg.com/leaflet/dist/images/marker-icon.png',
+    iconUrl,
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34]
   })
 }).addTo(map);
 
-marker.bindPopup('<b>Hello world!</b><br>I am a popup.').openPopup();
+marker.bindPopup('<b>Hello world!</b><br>I am a popup.')// .openPopup();
 
 const centerX = imageHeight / 2;
 const centerY = imageWidth / 2;
@@ -59,10 +61,10 @@ const markers = [
 markers.forEach(function(marker) {
   L.marker(marker.coords, {
     icon: L.icon({
-      iconUrl: 'https://unpkg.com/leaflet/dist/images/marker-icon.png',
+      iconUrl,
       iconSize: [25, 41],
       iconAnchor: [12, 41],
       popupAnchor: [1, -34]
     })
-  }).addTo(map).bindPopup(marker.popup).openPopup();
+  }).addTo(map).bindPopup(marker.popup)// .openPopup();
 });
