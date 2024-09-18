@@ -8,11 +8,22 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="loading">Loading...</div>
+
   <div id="map"></div>
+  
   <div id="button_console">
     <a href="https://devcon.org/en" target="_blank" id="devcon">DEVCON</a>
     <a href="https://invisible.garden" target="_blank" id="invisible_garden">INVISIBLE GARDEN</a>
   </div>
+  
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+  
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="map.js"></script>
 </body>
