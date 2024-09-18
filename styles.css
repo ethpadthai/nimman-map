@@ -33,18 +33,27 @@ html, body {
 
 #button_console a {
   padding: 10px 20px;
-  background-color: white;
-  color: black;
+  background-color: #556B2F ;
+  color: white;
   text-decoration: none;
   border-radius: 5px;
   font-size: 12px;
   border: solid 2px black;
   width: 150px;
   text-align: center;
+  display: 'flex';
+  justify-content: 'center';
+  align-items: center;
 }
 
 #button_console a:hover {
-  background-color: #F5F5F5;
+  cursor: 'pointer'
+}
+
+#button_console img {
+  width: 60px;
+  height: 40px;
+  margin-right: 5px;
 }
 
 .modal {
