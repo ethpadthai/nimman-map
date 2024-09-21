@@ -6,7 +6,7 @@ const distanceFromCenter = 1000;
 const map = L.map('map', {
   crs: L.CRS.Simple,
   minZoom: -2,
-  maxZoom: 10,
+  maxZoom: -1,
   zoomControl: true,
   attributionControl: false
 });
