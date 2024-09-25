@@ -11,6 +11,8 @@ const map = L.map('map', {
   attributionControl: false
 });
 
+
+
 let imageBounds = [[0, 0], [imageHeight, imageWidth]];
 let imageLayer = L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
@@ -41,11 +43,15 @@ const locMarker = () => {
   });
 }
 
+var img = new Image();
+img.onload = function () { hideLoadingScreen(); }
+img.src = imageUrl;
+
 const hideLoadingScreen = () => {
   document.getElementById('loading').style.display = 'none';
 };
 
-map.once('load', hideLoadingScreen);
+//map.once('load', hideLoadingScreen);
 
 adjustMapView();
 // window.addEventListener('resize', adjustMapView);
