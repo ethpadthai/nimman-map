@@ -98,7 +98,7 @@ const markers = [
   {
     coords: [8132, 11420], context: ['<h1>zkBankai</h1>', '<p>We\'re zk devs, researchers and hobbyist! 💻✨</p>', '<a href="https://x.com/zk_bankai">Website</a>']
   },
-  { coords: [8168, 11348], context: ['<h1>Dapp Learning</h1>', '<p>DappLearning is for developers at all stages.</p>', '<a href="https://dapplearning.org/">Website</a>'] },
+  { coords: [8194, 11344], context: ['<h1>Dapp Learning</h1>', '<p>DappLearning is for developers at all stages.</p>', '<a href="https://dapplearning.org/">Website</a>'] },
   {
     coords: [8108, 11324], context: ['<h1>OpenBuild</h1>', '<p>Help ✦ Developers ✦ get on the Success Way to Web3</p>', '<a href="https://openbuild.xyz/">Website</a>']
   },
@@ -111,7 +111,7 @@ const markers = [
 <p>30 SEP - 10 NOV, 2024</p>', '<a href="https://invisible.garden">Website</a>']
   },
   {
-    coords: [9432, 10216], color: 'red', context: ['<h1>ShanhaiWoo 山海坞</h1>', '<h2>A Dynamic Month-Long Popup Village</h2> \
+    coords: [8643, 10099], color: 'red', context: ['<h1>ShanhaiWoo 山海坞</h1>', '<h2>A Dynamic Month-Long Popup Village</h2> \
 <p>An ideal place constructed by each member with their most romantic desire for what the community ought to be.</p>',
       , '<a href="https://www.shanhaiwoo.com/">Website</a>']
   },
@@ -122,7 +122,7 @@ const markers = [
       '<a href="https://www.fundingthecommons.io/">Website</a>']
   },
   {
-    coords: [8111, 11775], color: 'red', context: ['<h1>MegaZu</h1>', '<p>A pop-up village for 🔥50 god-tier Ethereum dapps builders 🔥 in Chiang Mai, Thailand, from October 7 to November 7, co-created by @eigenlayer and @megaeth_labs</p>',
+    coords: [7999, 12543], color: 'red', context: ['<h1>MegaZu</h1>', '<p>A pop-up village for 🔥50 god-tier Ethereum dapps builders 🔥 in Chiang Mai, Thailand, from October 7 to November 7, co-created by @eigenlayer and @megaeth_labs</p>',
       '<a href="https://www.megazu.fun/">Website</a>'
     ]
   },
