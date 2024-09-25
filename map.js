@@ -29,19 +29,17 @@ const adjustMapView = () => {
   imageLayer.setBounds(imageBounds);
   map.fitBounds(imageBounds);
   map.setMaxBounds(imageBounds);
-
-
 }
 
-// const locMarker = () => {
-//   var marker = L.marker([imageHeight / 2, imageHeight / 2], {
-//     draggable: true,
-//   }).addTo(map);
-//   marker.bindPopup('LatLng Marker').openPopup();
-//   marker.on('dragend', function (e) {
-//     marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
-//   });
-// }
+const locMarker = () => {
+  var marker = L.marker([imageHeight / 2, imageHeight / 2], {
+    draggable: true,
+  }).addTo(map);
+  marker.bindPopup('LatLng Marker').openPopup();
+  marker.on('dragend', function (e) {
+    marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
+  });
+}
 
 const hideLoadingScreen = () => {
   document.getElementById('loading').style.display = 'none';
@@ -128,18 +126,20 @@ const markers = [
 ];
 
 markers.forEach(marker => {
+  const size = marker.color == 'red' ? 40 : 32;
+  const anchor = marker.color == 'red' ? 20 : 15;
+
   const icon = L.divIcon({
     className: 'custom-div-icon',
     html: `
         <div class="marker-pulse"></div>
         <div class="marker-inner" style="background-color: ${marker.color || 'blue'};"></div>
     `,
-    iconSize: [32, 32],
-    iconAnchor: [15, 15]
+    iconSize: [size, size],
+    iconAnchor: [anchor, anchor]
   });
 
   L.marker(marker.coords, { icon: icon })
     .addTo(map)
     .on('click', () => openModal(marker.context));
 });
-

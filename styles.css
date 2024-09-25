@@ -159,7 +159,7 @@ body {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(190, 190, 190, 0.4);
-  animation: pulse-border 2s infinite;
+  animation: pulse-border 1s infinite;
 }
 
 .marker-inner {
@@ -170,7 +170,7 @@ body {
   width: 50%;
   height: 50%;
   border-radius: 50%;
-  animation: pulse-inner 2s infinite;
+  animation: pulse-inner 1s infinite;
 }
 
 @keyframes pulse-border {
@@ -178,10 +178,12 @@ body {
     transform: translateX(-50%) translateY(-50%) scale(1);
     opacity: 1;
   }
+
   70% {
     transform: translateX(-50%) translateY(-50%) scale(1.5);
     opacity: 0;
   }
+
   100% {
     transform: translateX(-50%) translateY(-50%) scale(1);
     opacity: 0;
@@ -192,9 +194,11 @@ body {
   0% {
     transform: translateX(-50%) translateY(-50%) scale(1);
   }
+
   50% {
     transform: translateX(-50%) translateY(-50%) scale(0.8);
   }
+
   100% {
     transform: translateX(-50%) translateY(-50%) scale(1);
   }
