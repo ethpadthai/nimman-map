@@ -51,7 +51,7 @@ const hideLoadingScreen = () => {
   document.getElementById('loading').style.display = 'none';
 };
 
-//map.once('load', hideLoadingScreen);
+map.once('load', hideLoadingScreen);
 
 adjustMapView();
 // window.addEventListener('resize', adjustMapView);
@@ -89,17 +89,17 @@ const centerX = imageHeight / 2;
 const centerY = imageWidth / 2;
 
 const markers = [
-  { coords: [8600, 10980], context: ['EthPadThai'] },
-  { coords: [8628, 11060], context: ['ZKP Labs'] },
-  { coords: [8600, 11180], context: ['Antalpha Labs'] },
-  { coords: [8600, 11280], context: ['Ethereum Colombia'] },
-  { coords: [8500, 11380], context: ['Ethereum Costa Rica'] },
+  { coords: [8600, 10980], context: ['<h1>EthPadThai</h1>'] },
+  { coords: [8628, 11060], context: ['<h1>ZKP Labs</h1>'] },
+  { coords: [8600, 11180], context: ['<h1>Antalpha Labs</h1>'] },
+  { coords: [8600, 11280], context: ['<h1>Ethereum Colombia</h1>'] },
+  { coords: [8500, 11380], context: ['<h1>Ethereum Costa Rica</h1>'] },
 
-  { coords: [8132, 11420], context: ['zkBankai'] },
-  { coords: [8168, 11348], context: ['Dapp Learning'] },
-  { coords: [8108, 11324], context: ['OpenBuild'] },
-  { coords: [8280, 11416], context: ['EthPanda'] },
-  { coords: [8380, 11416], context: ['EthKL'] },
+  { coords: [8132, 11420], context: ['<h1>zkBankai</h1>'] },
+  { coords: [8168, 11348], context: ['<h1>Dapp Learning</h1>'] },
+  { coords: [8108, 11324], context: ['<h1>OpenBuild</h1>'] },
+  { coords: [8280, 11416], context: ['<h1>EthPanda</h1>'] },
+  { coords: [8380, 11416], context: ['<h1>EthKL</h1>'] },
 
   {
     coords: [8124, 10968], color: 'red', context: ['<h1>Invisible Garden</h1>', '<h2>Ethereum and ZKP dev city #0</h2> \
