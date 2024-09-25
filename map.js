@@ -1,4 +1,4 @@
-const imageUrl = 'Fantasy-map.jpg';
+const imageUrl = 'images/map.jpg';
 const imageWidth = 20933;
 const imageHeight = 15700;
 const distanceFromCenter = 1000;
@@ -18,27 +18,39 @@ const adjustMapView = () => {
   let aspectRatioViewport = window.innerWidth / window.innerHeight;
   let aspectRatioImage = imageWidth / imageHeight;
 
-  if (aspectRatioViewport > aspectRatioImage) {
+  /*if (true) {
     let newHeight = imageWidth / aspectRatioViewport;
     imageBounds = [[(imageHeight - newHeight) / 2, 0], [(imageHeight + newHeight) / 2, imageWidth]];
   } else {
     let newWidth = imageHeight * aspectRatioViewport;
     imageBounds = [[0, (imageWidth - newWidth) / 2], [imageHeight, (imageWidth + newWidth) / 2]];
-  }
+  }*/
 
   imageLayer.setBounds(imageBounds);
   map.fitBounds(imageBounds);
   map.setMaxBounds(imageBounds);
+
+
+}
+
+const locMarker = () => {
+  var marker = L.marker([imageHeight / 2, imageHeight / 2], {
+    draggable: true,
+  }).addTo(map);
+  marker.bindPopup('LatLng Marker').openPopup();
+  marker.on('dragend', function (e) {
+    marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
+  });
 }
 
 const hideLoadingScreen = () => {
   document.getElementById('loading').style.display = 'none';
 };
 
-map.once('load', hideLoadingScreen); 
+map.once('load', hideLoadingScreen);
 
 adjustMapView();
-window.addEventListener('resize', adjustMapView);
+// window.addEventListener('resize', adjustMapView);
 
 const iconUrl = 'https://unpkg.com/leaflet/dist/images/marker-icon.png';
 
@@ -52,7 +64,7 @@ if (modalText.innerText === '') {
 
 const openModal = (text) => {
   modal.style.display = 'flex';
-  modalText.innerHTML = text;
+  modalText.innerHTML = text.join('');
 };
 
 const closeModal = () => {
@@ -67,36 +79,68 @@ window.onclick = (event) => {
   }
 };
 
-const centerMarker = L.marker([imageHeight / 2, imageWidth / 2], {
-  icon: L.icon({
-    iconUrl,
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34]
-  })
-}).addTo(map);
-
-centerMarker.on('click', () => {
-  openModal('Hello world on center');
-});
+locMarker();
 
 const centerX = imageHeight / 2;
 const centerY = imageWidth / 2;
 
 const markers = [
-  { coords: [centerX - distanceFromCenter, centerY - distanceFromCenter], context: '<b>Hello world!</b><br>I am a popup at Top-Left Marker.' },
-  { coords: [centerX - distanceFromCenter, centerY + distanceFromCenter], context: '<b>Hello world!</b><br>I am a popup at Top-Right Marker.' },
-  { coords: [centerX + distanceFromCenter, centerY - distanceFromCenter], context: '<b>Hello world!</b><br>I am a popup at Bottom-Left Marker.' },
-  { coords: [centerX + distanceFromCenter, centerY + distanceFromCenter], context: '<b>Hello world!</b><br>I am a popup at Bottom-Right Marker.' },
+  { coords: [8600, 10980], context: ['EthPadThai'] },
+  { coords: [8628, 11060], context: ['ZKP Labs'] },
+  { coords: [8600, 11180], context: ['Antalpha Labs'] },
+  { coords: [8600, 11280], context: ['Ethereum Colombia'] },
+  { coords: [8500, 11380], context: ['Ethereum Costa Rica'] },
+
+  { coords: [8132, 11420], context: ['zkBankai'] },
+  { coords: [8168, 11348], context: ['Dapp Learning'] },
+  { coords: [8108, 11324], context: ['OpenBuild'] },
+  { coords: [8280, 11416], context: ['EthPanda'] },
+  { coords: [8380, 11416], context: ['EthKL'] },
+
+  {
+    coords: [8124, 10968], color: 'red', context: ['<h1>Invisible Garden</h1>', '<h2>Ethereum and ZKP dev city #0</h2> \
+<p>THAILAND</p> \
+<p>30 SEP - 10 NOV, 2024</p>', '<a href="https://invisible.garden">Website</a>']
+  },
+  {
+    coords: [9432, 10216], color: 'red', context: ['<h1>ShanhaiWoo 山海坞</h1>', '<h2>A Dynamic Month-Long Popup Village</h2> \
+<p>An ideal place constructed by each member with their most romantic desire for what the community ought to be.</p>',
+      , '<a href="https://www.shanhaiwoo.com/">Website</a>']
+  },
+  {
+    coords: [3264, 8336], color: 'red', context: ['<h1>Funding the commons</h1>', '<p>Join us in Thailand</p> \
+<p>November 6-9, 2024</p> \
+<p>From November 6th-9th at DistrictX, Funding the Commons and Earth Commons is hosting a dynamic series of events aimed at shaping the future of public goods. By offering a variety of formats—from interactive workshops to immersive experiences —we create the ideal environment for experimentation, collaboration, and innovation, enabling new ideas and solutions to emerge.</p>',
+      '<a href="https://www.fundingthecommons.io/">Website</a>']
+  },
+  {
+    coords: [8111, 11775], color: 'red', context: ['<h1>MegaZu</h1>', '<p>A pop-up village for 🔥50 god-tier Ethereum dapps builders 🔥 in Chiang Mai, Thailand, from October 7 to November 7, co-created by @eigenlayer and @megaeth_labs</p>',
+      '<a href="https://www.megazu.fun/">Website</a>'
+    ]
+  },
+  {
+    coords: [6980, 14214], color: 'red', context: ['<h1>Edge City Lanna</h1>',
+      '<h2>A popup village to incubate a flourishing future.</h2>',
+      '<p>Join us October 10th - November 10th in beautiful Chiang Mai to live in a healthy community focused on incubating novel technologies and ways of living.</p>',
+      '<a href="https://www.edgecity.live/lanna">Website</a>'
+    ]
+  },
 ];
 
 markers.forEach(marker => {
-  L.marker(marker.coords, {
+  /*L.marker(marker.coords, {
     icon: L.icon({
       iconUrl,
       iconSize: [25, 41],
       iconAnchor: [12, 41],
       popupAnchor: [1, -34]
     })
+  }).addTo(map).on('click', () => openModal(marker.context));*/
+  L.circle(marker.coords, {
+    color: marker.color || 'blue',
+    fillColor: marker.color || 'blue',
+    fillOpacity: 0.5,
+    radius: marker.color == 'red' ? 50 : 25,
   }).addTo(map).on('click', () => openModal(marker.context));
 });
+

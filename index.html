@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,25 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div id="loading">Loading...</div>
 
   <div id="map"></div>
-  
+
   <div id="button_console">
     <a href="https://devcon.org/en" target="_blank" id="devcon">
-      <img 
-        src="devcon.png" 
-        alt="DEVCON Logo"
-      >
+      <img src="images/devcon.png" alt="DEVCON Logo">
     </a>
-    <a 
-      href="https://ethpadthai.org" 
-      target="_blank" 
-      id="invisible_garden"
-    >
-      <img 
-        src="https://events.ethpadthai.org/wp-content/uploads/2024/08/EthPadthaiLogo-1-2048x597.png" 
-        alt="ETHPadThai"
-        id="ethpadthai"
-      >
+    <a href="https://ethpadthai.org" target="_blank" id="invisible_garden">
+      <img src="images/ethpadthai-logo.png" alt="ETHPadThai" id="ethpadthai">
     </a>
   </div>
-  
+
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p id="modal-text"></p>
-      <img src="Fantasy-map.jpg" alt="">
+      <div id="modal-text"></div>
     </div>
   </div>
 
@@ -47,8 +37,9 @@
       <img src="Fantasy-map.jpg" alt="">
     </div>
   </div> -->
-  
+
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="map.js"></script>
 </body>
+
 </html>

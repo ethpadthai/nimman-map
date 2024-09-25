@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -33,13 +34,14 @@ html, body {
 
 #button_console a {
   padding: 10px 20px;
-  background-color: white ;
+  background-color: white;
   color: black;
   text-decoration: none;
   border-radius: 5px;
   font-size: 12px;
   border: solid 2px black;
   width: 150px;
+  height: 40px;
   text-align: center;
   display: 'flex';
   justify-content: 'center';
@@ -51,8 +53,7 @@ html, body {
 }
 
 #button_console img {
-  width: 100%;
-  height: 40px;
+  height: 100%;
   margin-right: 5px;
 }
 
@@ -112,7 +113,8 @@ html, body {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 500px;
+  /* max-width: 500px; */
+  min-height: 90%;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 
@@ -121,6 +123,7 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: scroll;
 }
 
 .modal-content img {
@@ -146,4 +149,3 @@ html, body {
   text-decoration: none;
   cursor: pointer;
 }
-
