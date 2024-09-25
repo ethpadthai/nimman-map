@@ -33,15 +33,15 @@ const adjustMapView = () => {
 
 }
 
-const locMarker = () => {
-  var marker = L.marker([imageHeight / 2, imageHeight / 2], {
-    draggable: true,
-  }).addTo(map);
-  marker.bindPopup('LatLng Marker').openPopup();
-  marker.on('dragend', function (e) {
-    marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
-  });
-}
+// const locMarker = () => {
+//   var marker = L.marker([imageHeight / 2, imageHeight / 2], {
+//     draggable: true,
+//   }).addTo(map);
+//   marker.bindPopup('LatLng Marker').openPopup();
+//   marker.on('dragend', function (e) {
+//     marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
+//   });
+// }
 
 const hideLoadingScreen = () => {
   document.getElementById('loading').style.display = 'none';
@@ -79,7 +79,7 @@ window.onclick = (event) => {
   }
 };
 
-locMarker();
+// locMarker();
 
 const centerX = imageHeight / 2;
 const centerY = imageWidth / 2;
@@ -128,19 +128,18 @@ const markers = [
 ];
 
 markers.forEach(marker => {
-  /*L.marker(marker.coords, {
-    icon: L.icon({
-      iconUrl,
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34]
-    })
-  }).addTo(map).on('click', () => openModal(marker.context));*/
-  L.circle(marker.coords, {
-    color: marker.color || 'blue',
-    fillColor: marker.color || 'blue',
-    fillOpacity: 0.5,
-    radius: marker.color == 'red' ? 50 : 25,
-  }).addTo(map).on('click', () => openModal(marker.context));
+  const icon = L.divIcon({
+    className: 'custom-div-icon',
+    html: `
+        <div class="marker-pulse"></div>
+        <div class="marker-inner" style="background-color: ${marker.color || 'blue'};"></div>
+    `,
+    iconSize: [32, 32],
+    iconAnchor: [15, 15]
+  });
+
+  L.marker(marker.coords, { icon: icon })
+    .addTo(map)
+    .on('click', () => openModal(marker.context));
 });
 
