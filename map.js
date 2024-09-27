@@ -1,6 +1,6 @@
 
 // SET THIS TO TRUE TO SHOW DRAGABLE LOCATOR, SET IT BACK TO FALSE BEFORE COMMITING
-const showLocator = true;
+const showLocator = false;
 
 // EDIT THE MARKERS HERE
 const markers = [
