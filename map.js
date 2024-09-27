@@ -4,7 +4,7 @@ const showLocator = false;
 
 // EDIT THE MARKERS HERE
 const markers = [
-  { coords: [-32.392459, 14.592596], context: ['<h1>EthPadThai</h1>', '<p>The extra spicy Ethereum Community in Thailand 🇹🇭 Welcome to join us!</p>', , '<a href="https://ethpadthai.org/">Website</a>'] },
+  { coords: [-32.392459, 14.592596], context: ['<h1>EthPadThai</h1>', '<img src="images/ethpadthai-logo.png">', '<p>The extra spicy Ethereum Community in Thailand 🇹🇭 Welcome to join us!</p>', , '<a href="https://ethpadthai.org/">Website</a>'] },
   { coords: [-23.095175, 13.174926], context: ['<h1>ZKP Labs</h1>', '<p>Securing the Future of Web3 with Zero-Knowledge Proof</p>', '<a href="https://zkplabs.network/">Website</a>'] },
   { coords: [-24.095175, 14.174926], context: ['<h1>Antalpha Labs</h1>', '<p></p>', '<a href="https://labs.antalpha.com/">Website</a>'] },
   { coords: [-25.095175, 15.174926], context: ['<h1>Ethereum Colombia</h1>', '<p>El Jardín Infinito en Colombia</p>', '<a href="https://www.ethcolombia.org/">Website</a>'] },
@@ -15,13 +15,13 @@ const markers = [
   },
   { coords: [-28.095175, 16.174926], context: ['<h1>Dapp Learning</h1>', '<p>DappLearning is for developers at all stages.</p>', '<a href="https://dapplearning.org/">Website</a>'] },
   {
-    coords: [-32.095175, 16.174926], context: ['<h1>OpenBuild</h1>', '<p>Help ✦ Developers ✦ get on the Success Way to Web3</p>', '<a href="https://openbuild.xyz/">Website</a>']
+    coords: [-32.095175, 16.174926], context: ['<h1>OpenBuild</h1>', '<img src="images/openbuild-logo.jpg">', '<p>Help ✦ Developers ✦ get on the Success Way to Web3</p>', '<a href="https://openbuild.xyz/">Website</a>']
   },
   { coords: [-31.095175, 16.174926], context: ['<h1>EthPanda</h1>', '<p>A group of Ethereum builders dedicated to facilitating Chinese-speaking network to deliver support for Ethereum. </p>', '<a href="https://forum.ethpanda.org/about">Website</a>'] },
   { coords: [-30.095175, 16.174926], context: ['<h1>EthKL</h1>', '<p>Kuala Lumpur\'s Ethereum Community</p>', '<a href="https://www.ethkl.org/">Website</a>'] },
 
   {
-    coords: [-31.122326, 8.351184], color: 'red', context: ['<h1>Invisible Garden</h1>', '<h2>Ethereum and ZKP dev city #0</h2> \
+    coords: [-31.122326, 8.351184], color: 'red', context: ['<h1>Invisible Garden</h1>', '<img src="images/ig-logo.png">', '<h2>Ethereum and ZKP dev city #0</h2> \
 <p>THAILAND</p> \
 <p>30 SEP - 10 NOV, 2024</p>', '<a href="https://invisible.garden">Website</a>']
   },
