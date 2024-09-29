@@ -50,24 +50,14 @@ const markers = [
   },
 ];
 
-
-/*const map = L.map('map', {
-  crs: L.CRS.Simple,
-  minZoom: -2,
-  maxZoom: -1,
-  zoomControl: true,
-  attributionControl: false
-});*/
-
-var map = L.map('map').setView([0, 0], 0);
+var map = L.map('map');
 L.tileLayer('images/tiles/{z}/{x}/{y}.png', {
   continuousWorld: false,
   noWrap: true,
-  minZoom: 4,
-  maxZoom: 6,
+  minZoom: 3,
+  maxZoom: 5,
 }).addTo(map);
-
-map.panTo(new L.LatLng(-29.49136, 10.812586));
+map.setView([-29.49136, 10.812586], 4);
 
 const locMarker = () => {
   var marker = L.marker([0, 0], {

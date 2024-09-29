@@ -14,8 +14,8 @@ tile_source_path = os.path.join(base_path, "map.png")
 # where we put our chopped up images
 tile_gen_path = os.path.join(base_path, "tiles")
 
-MIN_ZOOM = 4
-MAX_ZOOM = 7
+MIN_ZOOM = 3
+MAX_ZOOM = 6
 
 TILE_SIZE = 256  # width and height of each tile
 
