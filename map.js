@@ -21,7 +21,7 @@ const markers = [
   { coords: [-30.095175, 16.174926], context: ['<h1>EthKL</h1>', '<p>Kuala Lumpur\'s Ethereum Community</p>', '<a href="https://www.ethkl.org/">Website</a>'] },
 
   {
-    coords: [-31.122326, 8.351184], color: 'red', context: ['<h1>Invisible Garden</h1>', '<img src="images/ig-logo.png">', '<h2>Ethereum and ZKP dev city #0</h2> \
+    coords: [-31.122326, 8.351184], color: 'red', context: ['<h1>Invisible Garden</h1>', '<p><a href="https://app.sola.day/event/detail/9455">Buy COWORKING passes here</a></p>', '<img src="images/ig-logo.png">', '<h2>Ethereum and ZKP dev city #0</h2> \
 <p>THAILAND</p> \
 <p>30 SEP - 10 NOV, 2024</p>', '<a href="https://invisible.garden">Website</a>']
   },
